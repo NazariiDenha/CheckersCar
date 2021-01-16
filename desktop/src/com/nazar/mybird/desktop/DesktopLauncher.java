@@ -7,6 +7,8 @@ import com.nazar.mybird.MyBird;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.height = 562;
+		config.width = 860;
 		new LwjglApplication(new MyBird(), config);
 	}
 }
