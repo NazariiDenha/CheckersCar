@@ -1,9 +1,8 @@
-package com.nazar.mybird;
+package com.nazar.mybird.tools;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
-import sun.security.mscapi.CPublicKey;
 
 
 public class Background {
@@ -17,7 +16,7 @@ public class Background {
         }
     }
     private final Picture[] pictures;
-    public Background(int x) {
+    public Background() {
         speed = 4;
         pictures = new Picture[2];
         pictures[0] = new Picture(new Vector2(0, 0));
