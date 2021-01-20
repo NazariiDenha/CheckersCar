@@ -9,15 +9,16 @@ import com.badlogic.gdx.math.Vector2;
 
 public class MyCar extends Car{
     public static int xSpeed;
-    private int minSpeed = 4;
+    private int minSpeed = 0;
     private int ySpeed = 3;
     private int mxYSpeed = 8;
+    protected static Rectangle bounds;
     public MyCar() {
         super(20, 233);
         vel = new Vector2(minSpeed, 0);
         xSpeed = minSpeed;
         texture = new Texture("mycar.png");
-        bounds = new Rectangle(20, 233, texture.getWidth(), texture.getHeight());
+        bounds = new Rectangle(20 + 10, 233 + 10, texture.getWidth() - 20, texture.getHeight() - 20);
     }
 
     @Override
@@ -32,7 +33,7 @@ public class MyCar extends Car{
                 xSpeed--;
             }
         }
-        int ys = (int)Math.min(mxYSpeed, ySpeed + vel.x - 4);
+        int ys = (int)Math.min(mxYSpeed, ySpeed + vel.x - minSpeed);
         if (Gdx.input.isKeyPressed(Input.Keys.UP)){
             if (pos.y + ys + texture.getHeight() <= 562){
                 vel.y = ys;
@@ -45,7 +46,7 @@ public class MyCar extends Car{
         }
         pos.y += vel.y;
         vel.y = 0;
-        bounds.setPosition(pos.x, pos.y);
+        bounds.setPosition(pos.x + 10, pos.y + 10);
     }
 
     @Override

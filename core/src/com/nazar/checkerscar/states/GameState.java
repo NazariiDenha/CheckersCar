@@ -18,10 +18,10 @@ public class GameState extends State{
         background = new Background();
         myCar = new MyCar();
         lanes = new ArrayList<>();
-        lanes.add(new Lane(false, 5, 51));
-        lanes.add(new Lane(false, 140, 185));
-        lanes.add(new Lane(true, 280, 325));
-        lanes.add(new Lane(true, 415, 461));
+        lanes.add(new Lane(false, 5, 51, this));
+        lanes.add(new Lane(false, 140, 185, this));
+        lanes.add(new Lane(true, 280, 325, this));
+        lanes.add(new Lane(true, 415, 461, this));
     }
 
     @Override
@@ -48,5 +48,14 @@ public class GameState extends State{
             lane.render(batch);
         }
         batch.end();
+    }
+
+    public void endGame()  {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            //e.printStackTrace();
+        }
+        manager.reset(new MenuState(manager));
     }
 }
