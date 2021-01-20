@@ -1,4 +1,4 @@
-package com.nazar.mybird.states;
+package com.nazar.checkerscar.states;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -6,14 +6,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
-import sun.awt.windows.WPrinterJob;
 
-public class MenuState extends State{
+public class MenuState extends State {
     private Texture bgtexture;
     private ImageButton startButton;
     private Stage stage;
@@ -29,7 +27,7 @@ public class MenuState extends State{
         startButton.setPosition(270, 226);
         startButton.addListener(new ClickListener(){
            public void clicked(InputEvent event, float x, float y){
-               manager.reset(new GameState(manager));
+               manager.reset(new com.nazar.checkerscar.states.GameState(manager));
            }
         });
         stage.addActor(startButton);

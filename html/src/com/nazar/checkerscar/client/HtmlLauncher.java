@@ -1,9 +1,9 @@
-package com.nazar.mybird.client;
+package com.nazar.checkerscar.client;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.nazar.mybird.CheckersCar;
+import com.nazar.checkerscar.CheckersCar;
 
 public class HtmlLauncher extends GwtApplication {
 

@@ -1,8 +1,8 @@
-package com.nazar.mybird.desktop;
+package com.nazar.checkerscar.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.nazar.mybird.CheckersCar;
+import com.nazar.checkerscar.CheckersCar;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {

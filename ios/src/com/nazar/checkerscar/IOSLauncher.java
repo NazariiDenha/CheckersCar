@@ -1,4 +1,4 @@
-package com.nazar.mybird;
+package com.nazar.checkerscar;
 
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.UIApplication;

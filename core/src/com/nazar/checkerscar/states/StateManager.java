@@ -1,4 +1,4 @@
-package com.nazar.mybird.states;
+package com.nazar.checkerscar.states;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 

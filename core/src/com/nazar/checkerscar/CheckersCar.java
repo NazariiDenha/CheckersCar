@@ -1,11 +1,11 @@
-package com.nazar.mybird;
+package com.nazar.checkerscar;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.nazar.mybird.states.MenuState;
-import com.nazar.mybird.states.StateManager;
+import com.nazar.checkerscar.states.MenuState;
+import com.nazar.checkerscar.states.StateManager;
 
 public class CheckersCar extends ApplicationAdapter {
 	private SpriteBatch batch;

@@ -1,9 +1,9 @@
-package com.nazar.mybird.states;
+package com.nazar.checkerscar.states;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public abstract class State {
-    protected StateManager manager;
+    protected com.nazar.checkerscar.states.StateManager manager;
 
     public State(StateManager manager) {
         this.manager = manager;

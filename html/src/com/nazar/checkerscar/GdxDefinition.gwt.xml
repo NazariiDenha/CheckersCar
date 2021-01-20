@@ -4,7 +4,7 @@
 	<inherits name='com.badlogic.gdx.backends.gdx_backends_gwt' />
 
 	<inherits name='MyBird' />
-	<entry-point class='com.nazar.mybird.client.HtmlLauncher' />
+	<entry-point class='com.nazar.checkerscar.client.HtmlLauncher' />
 	<set-configuration-property name='xsiframe.failIfScriptTag' value='FALSE'/>
 	<set-configuration-property name="gdx.assetpath" value="../android/assets" />
 	<set-property name="user.agent" value="gecko1_8, safari"/>

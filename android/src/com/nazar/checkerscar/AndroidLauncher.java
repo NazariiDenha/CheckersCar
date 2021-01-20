@@ -1,4 +1,4 @@
-package com.nazar.mybird;
+package com.nazar.checkerscar;
 
 import android.os.Bundle;
 
