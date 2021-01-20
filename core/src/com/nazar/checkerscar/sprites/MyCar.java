@@ -8,28 +8,28 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 public class MyCar extends Car{
+    public static int xSpeed;
     private int minSpeed = 4;
     private int ySpeed = 3;
     private int mxYSpeed = 8;
-    public MyCar(int x, int y) {
-        super(x, y);
+    public MyCar() {
+        super(20, 233);
         vel = new Vector2(minSpeed, 0);
+        xSpeed = minSpeed;
         texture = new Texture("mycar.png");
-        bounds = new Rectangle(x, y, texture.getWidth(), texture.getHeight());
-    }
-
-    public int getXSpeed(){
-        return (int)vel.x;
+        bounds = new Rectangle(20, 233, texture.getWidth(), texture.getHeight());
     }
 
     @Override
-    public void update(float time) {
+    public void update() {
         if (Gdx.input.isKeyJustPressed(Input.Keys.RIGHT)){
             vel.x++;
+            xSpeed++;
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT)){
             if (vel.x - 1 >= minSpeed){
                 vel.x--;
+                xSpeed--;
             }
         }
         int ys = (int)Math.min(mxYSpeed, ySpeed + vel.x - 4);

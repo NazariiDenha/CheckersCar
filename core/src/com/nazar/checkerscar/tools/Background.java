@@ -3,6 +3,7 @@ package com.nazar.checkerscar.tools;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
+import com.nazar.checkerscar.sprites.MyCar;
 
 
 public class Background {
@@ -17,7 +18,7 @@ public class Background {
     }
     private final Picture[] pictures;
     public Background() {
-        speed = 4;
+        speed = 1;
         pictures = new Picture[2];
         pictures[0] = new Picture(new Vector2(0, 0));
         pictures[1] = new Picture(new Vector2(860, 0));
@@ -30,10 +31,11 @@ public class Background {
     }
 
     public void update(){
+        int sp = MyCar.xSpeed;
         for (Picture picture : pictures) {
-            picture.pos.x -= speed;
+            picture.pos.x -= sp;
             if (picture.pos.x <= -860) {
-                picture.pos.x = 860;
+                picture.pos.x = 860 + picture.pos.x + 860;
             }
         }
     }

@@ -14,6 +14,6 @@ public abstract class Car {
     public Car(int x, int y){
         pos = new Vector2(x, y);
     }
-    public abstract void update(float time);
+    public abstract void update();
     public abstract void render(SpriteBatch batch);
 }
