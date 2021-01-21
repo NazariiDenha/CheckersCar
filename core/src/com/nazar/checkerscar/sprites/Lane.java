@@ -27,13 +27,17 @@ public class Lane {
         EnemyCar lastCar = null;
         for (EnemyCar car : cars){
             car.update();
+            if (lastCar != null){
+                if (lastCar.bounds.x + lastCar.bounds.width + 50 >= car.bounds.x)lastCar.setMySpeed(car.getMySpeed());
+            }
             lastCar = car;
         }
         if (!cars.isEmpty() && cars.peek().pos.x + cars.peek().texture.getWidth() < 0){
             cars.remove();
+            if (!isReversed)state.updateScore();
         }
         if (lastCar == null || lastCar.pos.x + lastCar.texture.getWidth() < 860){
-            cars.add(new EnemyCar(860 + 50 + random.nextInt(4000), yMin + random.nextInt(yMax - yMin), isReversed, this));
+            cars.add(new EnemyCar(860 + 200 + random.nextInt(isReversed ? 3000 : 2000), yMin + random.nextInt(yMax - yMin), isReversed, this));
         }
     }
     public void render(SpriteBatch batch){
