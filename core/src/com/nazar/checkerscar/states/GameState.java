@@ -3,6 +3,7 @@ package com.nazar.checkerscar.states;
 
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -26,6 +27,7 @@ public class GameState extends State{
     private Texture gameOver;
     private boolean isGameOver;
     private Float timeGameOver;
+    private Music music;
 
 
     public GameState(StateManager manager) {
@@ -95,6 +97,9 @@ public class GameState extends State{
     public void endGame()  {
         gameOver = new Texture("gameover.png");
         isGameOver = true;
+        music = Gdx.audio.newMusic(Gdx.files.internal("crash.mp3"));
+        music.setVolume(1f);
+        music.play();
     }
 
     public void updateScore() {
