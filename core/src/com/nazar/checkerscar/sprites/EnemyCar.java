@@ -20,7 +20,6 @@ public class EnemyCar extends Car{
             else texture = new Texture("enemycars/enemycarreversed" + color.toString() + ".png");
         bounds = new Rectangle(x + 12, y + 7, texture.getWidth() - 24, texture.getHeight() - 14);
         mySpeed = random.nextInt(3) + 4;
-        System.out.println(mySpeed);
     }
 
     public int getMySpeed() {
